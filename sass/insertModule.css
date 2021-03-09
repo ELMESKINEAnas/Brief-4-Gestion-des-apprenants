@@ -230,14 +230,13 @@ a {
 
 table {
   width: 60%;
-  height: 600px;
   border-collapse: collapse;
   margin: 50px auto;
 }
 
 table caption {
   font-size: 1.5em;
-  margin: 0.5em 0 0.75em;
+  margin: .5em 0 .75em;
 }
 
 /* Zebra striping */
@@ -251,16 +250,14 @@ th {
   font-weight: bold;
 }
 
-td,
-th {
+td, th {
   padding: 10px;
   border: 1px solid #ccc;
   text-align: left;
   font-size: 16px;
 }
 
-tr,
-td {
+tr, td {
   text-align: center;
 }
 

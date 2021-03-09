@@ -230,14 +230,13 @@ a {
 
 table {
   width: 60%;
-  height: 600px;
   border-collapse: collapse;
   margin: 50px auto;
 }
 
 table caption {
   font-size: 1.5em;
-  margin: 0.5em 0 0.75em;
+  margin: .5em 0 .75em;
 }
 
 /* Zebra striping */
@@ -251,16 +250,14 @@ th {
   font-weight: bold;
 }
 
-td,
-th {
+td, th {
   padding: 10px;
   border: 1px solid #ccc;
   text-align: left;
   font-size: 16px;
 }
 
-tr,
-td {
+tr, td {
   text-align: center;
 }
 
@@ -452,6 +449,7 @@ td {
 }
 
 .contact-form {
+  text-align: center;
   background-color: #6C63FF;
   margin: 10% 0% 10% 10%;
   -webkit-box-flex: 60%;
@@ -472,6 +470,7 @@ td {
 .contact-form input[type=submit] {
   background-color: white;
   border-radius: 50px;
+  width: 120px;
   color: #c4c0d6;
 }
 
@@ -493,13 +492,29 @@ td {
     background-image: url("../img/background/background2.png");
     background-size: cover;
   }
-  .support-bg {
+  .bg-image .support-bg {
     background-image: none;
+    padding: 0;
+    margin: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  .support-bg .content-bg {
-    text-align: end;
+  .bg-image .support-bg p {
+    font-size: 16px;
+    margin-left: 20px;
   }
-  .support-bg .info-bg {
+  .bg-image .support-bg h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+  .bg-image .support-bg .contact-bg .arobas img {
+    max-width: 60%;
+  }
+  .bg-image .support-bg .contact-bg .home-icon img {
+    max-width: 60%;
+  }
+  .bg-image .support-bg .info-bg {
     display: none;
   }
   .contact-bg {
@@ -510,6 +525,8 @@ td {
     -webkit-box-flex: 0;
         -ms-flex: none;
             flex: none;
+    width: 85%;
+    margin: 10% auto;
   }
   .contact-bg .contact-pic {
     display: none;
