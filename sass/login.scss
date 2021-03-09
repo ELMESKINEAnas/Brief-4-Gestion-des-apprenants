@@ -1,0 +1,130 @@
+/*===== GOOGLE FONTS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+// @import 'mainroot';
+@import 'button';
+// @import 'header';
+// @import 'table';
+// @import 'footer';
+@import 'formStyle';
+
+/*===== BASE =====*/
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+// start style 
+
+
+.logo-bg-display{
+    display: none;
+}
+
+
+.login-bg img{
+    max-width: 65%;
+    position:absolute;
+    z-index: -1;
+}
+
+
+.form-container{
+    display: flex;
+    .space{
+        flex: 50%;
+    } 
+    .logo-form{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        flex:50%;
+        width: 40vw;
+        height:Auto;
+        
+        .logo{
+            align-self: center;
+            img{
+                max-width:65%;
+                }
+        }
+        .login-form{
+            @extend %form-style;
+            background-color: #F5F5F5;
+            width: 46vw;
+            margin: 0;
+            padding: 30px;
+            text-align: center;
+            h2{
+                text-align: left;
+            }
+            input{
+                width: 70%;
+            }
+            label{
+                margin-right: 10%;
+            }
+            input[type=submit]{
+                background-color: #6C63FF;
+                color:#F7F6FB ;
+                border-radius: 50px;
+                margin-top: 20px;
+                width: 120px;
+            &:hover{
+                background-color: #000000;
+                color:#ffffff ;
+            }
+            }
+        }
+        }
+    }
+
+
+@media screen and (max-width: 1000px) {
+   
+    .logo-bg-display{
+        display:flex;
+        justify-content: center;
+        
+        img{
+            max-width:60%;
+        }
+    }
+
+    .login-bg img{
+        display:none;
+    }
+
+    .form-container
+    {
+        .space{
+            display: none;
+        } 
+        .logo-form {
+            .login-form{
+                width: auto;
+                align-self: center;
+                margin-bottom: 5%;
+                padding: 2%;
+                input{
+                    width: 80%;
+                }
+                label{
+                    display: none;
+                }
+                input[type=submit]{
+                    width: 120px;
+                }
+                }
+                .logo {
+                    display: none;
+                }  
+        }
+    }
+
+}
+
+  

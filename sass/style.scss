@@ -1,56 +1,142 @@
 /*===== GOOGLE FONTS =====*/
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+@import 'mainroot';
 @import 'button';
 @import 'header';
 @import 'table';
 @import 'footer';
 
 
-/*===== VARIABLES CSS =====*/
-:root{
-    --header-height: 3rem;
-    --nav-width: 68px;
-
-    /*===== Colors =====*/
-    --first-color: #6C63FF;
-    --first-color-hover:#32408f;
-    --first-color-light: #c4c0d6;
-    --white-color: #F7F6FB;
-
-    /*===== Font and typography =====*/
-    --body-font: 'Nunito', sans-serif;
-    --normal-font-size: 1rem;
-  
-    /*===== z index =====*/
-    --z-fixed: 100;
-}
-
-/*===== BASE =====*/
-*,::before,::after{
-    box-sizing: border-box;
-}
-
-body{
-    position: relative;
-    margin: var(--header-height) 0 0 0;
-    padding: 0 1rem;
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
-    transition: .5s;
-}
-
-a{
-    text-decoration: none;
-}
 
 
-// start style 
- 
-.bg-image{
+// start style
+.bg-image {
     background-image: url("../img/background/background.png");
     background-repeat: no-repeat;
     height: auto;
     background-size: cover;
     width: 100%;
+    h2{
+        font-size:70px;
+        width:100%
+    }
+    p{
+        font-size:18px;
+        // padding: 0% 10% ;
+        text-align: center;
+        
+    }
+    .welcome{
+      text-align: center;
+      margin: 0 auto;
+      padding: 0 0 3% 0;
+      img{
+      margin-top: 4%;
+  }
+  }
+     .content-bg {
+      color: white;
+      overflow: auto;
+      margin: 0 auto;
+      width: 40%;
+      .btn-hm{
+      @extend .btn-log;
+      border-radius: 30px;
+    //   height:40px;
+    //   width:120px;
+      float: right;
+    
+  }
+  }
+  }
+  
+  
+
+  /***********************Media querry*************************/
+  @media only screen and (max-width: 1700px) {
+      .bg-image {
+    
+    h2{
+        font-size:46px;
+    }
+    p{
+        font-size:17px;
+    }
+   
+  }
+
+  
+}
+  
+  @media only screen and (max-width: 1220px) {
+      .bg-image {
+    
+    h2{
+        font-size:38px;
+    }
+    p{
+        font-size:17px;
+    }
+   
+  }
+  .bg-image{
+    .content-bg {
+        width: 50%;
+    }
+}
+  }
+  
+  @media only screen and (max-width: 800px) {
+
+    .welcome{
+      img{
+       width: 50%;
+  }
+  .div-btn{
+
+ a{
+     font-size: 22px;
+ }
+  .btn-hm{
+    height:30px;
+    width:100px;
+   
     
 }
+}
+    }
+    // .bg-image{
+    //     p{
+    //         // padding: 0% 3%;
+    //     }
+    // }
+
+    
+    .bg-image{
+    .content-bg {
+        width: 90%;
+    }
+}
+    }
+
+  @media only screen and (max-width: 600px) {
+      .bg-image {
+    
+    h2{
+        font-size:20px;
+    }
+    p{
+        font-size:13px;
+        padding: 0%;
+        // padding: 0% 3%;
+    }
+
+  }
+  .welcome{
+    img{
+     width: 80%;
+}
+  }
+  }
+
+  

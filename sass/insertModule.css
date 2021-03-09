@@ -1,10 +1,46 @@
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3rem;
+  --nav-width: 68px;
+  /*===== Colors =====*/
+  --first-color: #6C63FF;
+  --first-color-hover:#32408f;
+  --first-color-light: #c4c0d6;
+  --white-color: #F7F6FB;
+  /*===== Font and typography =====*/
+  --body-font: 'Nunito', sans-serif;
+  --normal-font-size: 1rem;
+  /*===== z index =====*/
+  --z-fixed: 100;
+}
+
+/*===== BASE =====*/
+*, ::before, ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: var(--header-height) 0 0 0;
+  padding: 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+a {
+  text-decoration: none;
+}
+
 .btn-log {
   display: inline-block;
   text-decoration: none;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.7px;
   padding: 10px 25px;
   cursor: pointer;
@@ -144,7 +180,7 @@
 
 /*Add padding body movil*/
 .body-pd {
-  padding-left: calc(var(--nav-width) + 1rem);
+  padding-left: calc(var(--nav-width) + 0.01rem);
 }
 
 /*Active links*/
@@ -165,7 +201,7 @@
 @media screen and (min-width: 768px) {
   body {
     margin: calc(var(--header-height) + 1rem) 0 0 0;
-    padding-left: calc(var(--nav-width) + 2rem);
+    padding-left: calc(var(--nav-width) + 0.01rem);
   }
   .header {
     height: calc(var(--header-height) + 1rem);
@@ -188,19 +224,20 @@
   }
   /*Add padding body desktop*/
   .body-pd {
-    padding-left: calc(var(--nav-width) + 188px);
+    padding-left: calc(var(--nav-width) + 155px);
   }
 }
 
 table {
-  width: 750px;
+  width: 60%;
+  height: 600px;
   border-collapse: collapse;
   margin: 50px auto;
 }
 
 table caption {
   font-size: 1.5em;
-  margin: .5em 0 .75em;
+  margin: 0.5em 0 0.75em;
 }
 
 /* Zebra striping */
@@ -214,14 +251,16 @@ th {
   font-weight: bold;
 }
 
-td, th {
+td,
+th {
   padding: 10px;
   border: 1px solid #ccc;
   text-align: left;
   font-size: 16px;
 }
 
-tr, td {
+tr,
+td {
   text-align: center;
 }
 
@@ -231,46 +270,6 @@ tr, td {
 
 .table-trash-icon {
   cursor: pointer;
-}
-
-@media only screen and (max-width: 1040px), (min-device-width: 768px) and (max-device-width: 1024px) {
-  table {
-    width: 100%;
-  }
-  /* Force table to not be like tables anymore */
-  table, thead, tbody, th, td, tr {
-    display: block;
-  }
-  /* Hide table headers (but not display: none;, for accessibility) */
-  thead tr {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-  }
-  tr {
-    border: 1px solid #ccc;
-  }
-  td {
-    /* Behave  like a "row" */
-    border: none;
-    border-bottom: 1px solid #eee;
-    position: relative;
-    padding-left: 50%;
-  }
-  td:before {
-    /* Now like a table header */
-    position: absolute;
-    /* Top/left values mimic padding */
-    top: 6px;
-    left: 6px;
-    width: 45%;
-    padding-right: 10px;
-    white-space: nowrap;
-    /* Label the data */
-    content: attr(data-column);
-    color: #000;
-    font-weight: bold;
-  }
 }
 
 /* footer */
@@ -339,7 +338,7 @@ tr, td {
   font-size: 25px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1300px) {
   .footer-con {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -363,10 +362,10 @@ tr, td {
   background-color: var(--white-color);
   padding: 20px;
   margin: 10% auto;
-  width: 44%;
+  width: 60%;
 }
 
-.insert-mod-container input, .insert-mod-container select {
+.insert-mod-container input, .insert-mod-container select, .insert-mod-container textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -391,43 +390,15 @@ tr, td {
   background-color: var(--first-color-hover);
 }
 
-/*===== VARIABLES CSS =====*/
-:root {
-  --header-height: 3rem;
-  --nav-width: 68px;
-  /*===== Colors =====*/
-  --first-color: #6C63FF;
-  --first-color-hover:#32408f;
-  --first-color-light: #c4c0d6;
-  --white-color: #F7F6FB;
-  /*===== Font and typography =====*/
-  --body-font: 'Nunito', sans-serif;
-  --normal-font-size: 1rem;
-  /*===== z index =====*/
-  --z-fixed: 100;
-}
-
-/*===== BASE =====*/
-*, ::before, ::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  position: relative;
-  margin: var(--header-height) 0 0 0;
-  padding: 0 1rem;
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-a {
-  text-decoration: none;
-}
-
 .insert-mod-container {
   margin-bottom: 16%;
+}
+
+@media screen and (max-width: 800px) {
+  .insert-mod-container {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
 }
 /*# sourceMappingURL=insertModule.css.map */
