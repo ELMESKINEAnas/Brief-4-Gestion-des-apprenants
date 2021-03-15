@@ -63,9 +63,7 @@ body{
             }
             input{
                 width: 70%;
-                // &:focus{
-                //     outline: 2px solid green;     /* oranges! yey */
-                //   }
+                
             }
             label{
                 margin-right: 10%;
@@ -80,6 +78,8 @@ body{
             &:hover{
                 background-color: #000000;
                 color:#ffffff ;
+                border-style: none;
+                border: none;
             }
             }
         }
