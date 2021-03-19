@@ -1,6 +1,6 @@
 -- les requêtes SQL
 
---R1
+--R1 
 
 select nom_etu from etudiant WHERE nom_etu  LIKE 's%';
 
